@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom task</title>
+    
+</head>
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <script>
+        var w3=document.getElementsByTagName("li")
+        let arr=["Chaitanya","Hello","Kumar"]
+for(i=0;i<arr.length;i++){
+    var co=""
+    var c1=""
+    for(j=0;j<arr[i].length;j++){
+        if(j%2==0){
+            co+=arr[i][j] 
+        }
+        else{
+            c1+=arr[i][j]
+            
+        }
+    }
+    console.log(co,c1);
+    var index=i*2;
+    w3[index].innerText=co;
+    w3[index].style.color="green"
+    w3[index+1].innerText=c1;
+    w3[index+1].style.color="orange"  
+}
+    </script>
+</body>
+</html>

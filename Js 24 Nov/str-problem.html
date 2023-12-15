@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 1. **Reverse a String:**
+        // Write a function that takes a string as input and returns the string reversed.
+        
+        console.log("function that takes a string as input and returns the string reversed:");
+        var sg="";
+        function hel(z){
+        for(i=z.length-1;i>=0;i--){
+        sg=sg+z[i];
+        }
+        console.log(sg);
+        }
+        hel("banana")
+
+
+        // 2. **Palindrome Check:**
+        // Write a function that checks whether a given string is a palindrome (reads the same forwards and backward). Ignore spaces, punctuation, and capitalization.
+        
+        console.log("To check whether given word is palindrome or not");
+        z="";
+        z2="";
+        s2="";
+        d4="";
+        function x5(a){
+        for(i=0;i<=a.length-1;i++){
+        z=z+a[i];
+        }
+        s2=z;
+        for(f=a.length-1;f>=0;f--){
+        z2=z2+a[f];
+        }
+        d4=z2;
+        if(s2==d4){
+        console.log("Given word " + a + " is a palindrome word ");
+        }
+        else{
+        console.log("Given word " + a + " is not a palindrome word" );
+        }
+        }
+        x5("level")
+
+        // 3. **Anagram Detection:**
+        // Write a function that checks if two words are anagrams of each other. Anagrams are words or phrases formed by rearranging the letters of another.
+
+        console.log("function that checks if two words are anagrams of each other. Anagrams are words or phrases formed by rearranging the letters of another:");
+        var g1="";
+        var g2="";
+        function anagram(word1,word2){
+        if(word1.length!==word2.length){
+        console.log("Given words are not anagram words")
+        }
+        const sword1=word1.split('').sort().join('');
+        const sword2=word2.split('').sort().join('');
+        if(sword1===sword2){
+        console.log(word1 + " and " + word2 + " are  anagrams");
+        }
+        else{
+        console.log(word1 + " and " + word2 + " are not anagrams");
+        }
+        }
+        anagram("silent","listen")
+     
+
+        // 4). **Count Vowels and Consonants:**
+        // Write a function that counts the number of vowels and consonants in a given string.
+
+        console.log("function that counts the number of vowels and consonants in a given string:");
+        var mt="";
+        var voc=0;
+        var conc=0;
+       function mi(w3){
+        for(r=0;r<=w3.length-1;r++){
+            mt=w3[r];
+            if(mt=="a" || mt=="e"|| mt=="i" || mt=="o"|| mt=="u"){
+                voc =voc+1;
+            }
+            else {
+                conc=conc+1;
+            }
+        }
+        console.log("Number of vowels in a given sentence is " + voc);
+        console.log("Number of vowels in a given sentence is " + conc);
+       }
+       mi("mississippi")
+
+       // 5. **Capitalize the First Letter of Each Word:**
+       // Write a function that capitalizes the first letter of each word in a given sentence.
+    
+        console.log("function that capitalizes the first letter of each word in a given sentence:");
+        var e="";
+        function t(f){
+        for(i=1;i<=f.length-1;i++){
+        if(f[i]==" "){
+        e=e + " " + f[i+1].toUpperCase();
+        i++;
+        }
+        else {
+        e=e+f[i];
+        }
+        }
+        console.log(f[0].toUpperCase()+e);
+        }
+        t("hello world im on earth")
+
+        // 6. **String Compression:**
+        // Implement a function to perform basic string compression using the counts of repeated characters. For example, "aabcccccaaa" becomes "a2b1c5a3".
+
+        console.log("function to perform basic string compression using the counts of repeated characters:");
+        var g1="";
+        var cou=1;
+        function compress(h){
+        for(i=0;i<h.length;i++){
+        if(h[i]===h[i+1]){
+        cou++;
+        }
+        else{
+        g1=g1 +h[i]+cou;
+        cou=1;
+        }
+        }
+        console.log(g1)
+        }
+        compress("aabbbbfffhjjwkk")
+
+        
+        // 7. **Find the Longest Word:**
+        // Write a function that finds the longest word in a sentence. If two or more words have the same length, return the first one.
+
+        console.log("function that finds the longest word in a sentence. If two or more words have the same length, return the first one:");
+        function x(h){
+            var d=h.split(" ");
+            for(y=0;y<d.length;y++){
+                if(d[y]>d[y+1]){
+                    console.log(d[y]);
+                }
+                else{
+                    console.log(d[0]);
+                }
+            }
+        }
+        x("hello world this is tarun reddy from hyderabad")
+
+        // 8. **Title Case a Sentence:**
+        // Write a function that converts a sentence to title case, where the first letter of each word is capitalized.
+
+        console.log("function that converts a sentence to title case, where the first letter of each word is capitalized:");
+        var g="";
+        function s(j){
+            for(t=1;t<=j.length-1;t++){
+                if(j[t]==" "){
+                    g=g+ " " + j[t+1].toUpperCase();
+                    t++;
+                }
+                else{
+                    g=g+j[t];
+                }
+            }
+            console.log(j[0].toUpperCase()+g);
+        }
+        s("hi every one how are you")
+    </script>
+</body>
+</html>

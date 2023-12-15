@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <style>
+        .re1{
+            animation-name: up;
+            animation-duration: 6s;
+            animation-name: up;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+        }
+        h1{
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            text-align: center;
+            border: 5px solid black;
+            display: inline-block;
+            animation-name: drop;
+            animation-duration: 4s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        div{
+            display: inline-block;
+            margin-left: 6px;
+        }
+        @keyframes drop {
+            from{transform: translate(0,0);}
+            to{transform: translate(100px,100px);}
+        }
+         @keyframes up {
+            from{transform: translateY(100px);}
+            to{transform: translateY(0);}
+        }
+    </style>
+</head>
+<body>
+    <div><h1 style="background-color: red;">G</h1></div>
+
+    <div class="re1"><h1 style="background-color: red;">O</h1></div>
+
+    <div><h1 style="background-color: yellow;">O</h1></div>
+
+    <div class="re1"><h1 style="background-color: yellow;">G</h1></div>
+
+    <div><h1 style="background-color: green;">L</h1></div>
+
+    <div  class="re1"><h1 style="background-color: green;">E</h1></div>
+</body>
+</html>

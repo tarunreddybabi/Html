@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="pa">
+        <p> This is old child</p>
+        <p>hello</p>
+    </div>
+    <script>
+        let e=document.getElementById("pa");
+
+        let o=document.getElementsByTagName("p")
+        let s=document.createElement("p")
+        s.innerText="hi friends"
+        e.replaceChild(s,o[0])
+        e.removeChild(o[1])        
+
+        
+
+        
+    </script>
+</body>
+</html>

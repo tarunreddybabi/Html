@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<li>hi</li>
+<li>hello</li>
+    
+    <script>
+        
+        // let d=["hi","hello","HiNanna","bye"]
+        // for(i=0;i<d.length;i+=2){
+        //     let lcr=document.createElement("li")
+
+        //     lcr.innerText=d[i]+" "+ i;
+
+        //     document.body.append(lcr)
+        //     console.log(lcr)
+        // }
+
+            // let i1=document.getElementsByTagName("img")
+            // i1[0].setAttribute("src","https://tse2.mm.bing.net/th?id=OIP.c17XAqg6srb_lo1ElbyJSgHaEK&pid=Api&P=0&h=220")
+
+            // let ary=["https://tse2.mm.bing.net/th?id=OIP.nYEuBjiuwCD6oR2JeVu5DwHaEK&pid=Api&P=0&h=220","https://images.pexels.com/photos/236047/pexels-photo-236047.jpeg?cs=srgb&dl=clouds-cloudy-countryside-236047.jpg&fm=jpg","https://tse1.mm.bing.net/th?id=OIP.uzoqk_5U5EGjz1iHSo6WOwHaEo&pid=Api&P=0&h=220","https://tse2.mm.bing.net/th?id=OIP.UwLdXJeXkclCYqLYEf6EGgHaE8&pid=Api&P=0&h=220","https://tse1.mm.bing.net/th?id=OIP.YWqPn8iX5L40UOg8w0kWOwHaEo&pid=Api&P=0&h=220"]
+            // for(i=0;i<ary.length;i++){
+            //     let i1=document.createElement("img")
+            //     document.body.appendChild(i1)
+            //     i1.setAttribute("src",ary[i])
+                
+            //     }
+
+let g=document.getElementsByTagName("li")
+
+ let cr=document.createElement("li")
+ cr.innerHTML="Hi Friends"
+document.body.append(cr)
+
+let by=document.getElementsByTagName("body")
+by[0].insertBefore(cr,g[1])
+
+</script>
+</body>
+</html>

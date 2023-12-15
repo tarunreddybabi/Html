@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainbow</title>
+    <style>
+        body{
+            background-image: linear-gradient(to right,rgb(205, 248, 205),rgb(130, 241, 145));
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+
+        }
+        .r1{
+            height: 350px;
+            width: 350px;
+            background-color: violet;
+            transition-property: all;
+            transition-duration: 4s;
+            transition-timing-function: ease-in-out;
+        }
+        div:hover{
+            width:1200px;
+            background-image: repeating-linear-gradient(230deg,violet,indigo 4%,blue 8%,green 12%,yellow 16%,orange 20%,red 24%);
+        }
+        p{
+            font-size: 30px;
+            text-align: center;
+            color:cyan;
+            background-image: repeating-linear-gradient(200deg,violet,indigo 4%,blue 8%,green 12%,yellow 16%,orange 20%,red 24%);
+        }
+    </style>
+</head>
+<body>
+    <p><b><u>Rainbow Transition</u></b></p>
+    <br><br>
+    <div class="r1"></div>
+</body>
+</html>

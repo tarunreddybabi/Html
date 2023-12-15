@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medium level Problems</title>
+</head>
+<body>
+    <script>
+
+        // 1) Write a function that converts an object into an array, where each element represents a key-value pair in the form of an array.
+
+        console.log("1) Write a function that converts an object into an array, where each element represents a key-value pair in the form of an array:");
+        function objecttoarray(ob){
+            let ota=Object.entries(ob)
+            return ota
+        }console.log(objecttoarray({ shrimp: 15, tots: 12 }))
+
+        // 2) Create a function that takes two numbers as arguments (num, length) and returns an array of multiples of num until the array length reaches length.
+
+        console.log(" 2) Create a function that takes two numbers as arguments (num, length) and returns an array of multiples of num until the array length reaches length");
+        function mul(a,b){
+        var multiples_array=[]
+        for(x=1;x<=b;x++){
+        multiples_array.push(a*x);
+        }
+        return multiples_array
+        }console.log(mul(12,5));
+
+        // 3)Create the function that takes an array with objects and returns the sum of people's budgets.
+
+        console.log(" 3) Create the function that takes an array with objects and returns the sum of people's budgets");
+        let w=0
+        function bud(obj){
+        for(z=0;z<obj.length;z++){
+        w=w+obj[z]["budget"];   
+        }}
+        bud([
+        { name: "John", age: 21, budget: 23000 },
+        { name: "Steve",  age: 32, budget: 40000 },
+        { name: "Martin",  age: 16, budget: 2700 }
+        ])
+        console.log(w)
+
+        // 4)Create a function that takes an array of objects like { name: "John", notes: [3, 5, 4]} and returns an array of objects like { name: "John", avgNote: 4 }. If a student has no notes (an empty array) then let's assume avgNote: 0.
+
+        console.log(" 4) Create a function that takes an array of objects like { name: \"John\", notes: [3, 5, 4]} and returns an array of objects like { name: \"John\", avgNote: 4 }. If a student has no notes (an empty array) then let's assume avgNote: 0:");
+        avg_nt=0;
+        function avgNote(nte){
+            for(let n1 in nte){
+                for(q=0;q<nte[n1]["notes"].length;q++){
+                    avg_nt += nte[n1]["notes"][q];
+                }
+                var ds= avg_nt/nte[n1]["notes"].length;
+            }
+            return ds
+        }console.log(avgNote([{ name: "John", notes: [3, 5, 4]}]));
+
+
+        // 5) Create a function that moves all capital letters to the front of a word.
+        console.log(" 5) Create a function that moves all capital letters to the front of a word:");
+        let vx="";
+        let cx="";
+        function cap(c){
+        for(x=0;x<c.length;x++){
+        if(c[x]==c[x].toUpperCase()){
+        vx=vx+c[x];
+        }
+        else{
+        cx=cx+c[x];
+        }
+        }
+        return vx+cx
+        }console.log(cap("hApPy"));
+
+        // 6)Count each occurrence of number
+
+        console.log(" 6)Count each occurrence of number :");
+        let wr=[1,6,3,1,5,9,7,2,1,9,3,7,8,9,10];
+        var c={};
+        for(s1=0;s1<wr.length;s1++){
+        if(c[wr[s1]]===undefined){
+        c[wr[s1]]=1;
+        }
+        else{
+        c[wr[s1]]++
+        }  
+        }
+        console.log(c);
+
+
+        // 7)Write a function that accepts an array of strings. Return the longest string.
+
+        console.log(" 7) Write a function that accepts an array of strings. Return the longest string:");
+        function long(word){
+            var wrd=""
+            var ew=word[0];
+            for(wr1=0;wr1<word.length;wr1++){
+                    if(word[wr1].length>ew.length){
+                     ew=word[wr1]
+                    }
+                }
+            console.log(ew)
+        }long(["nik", "nikhil", "Cow","Elephant"])
+
+
+        // 8)Most Commonly Used two Character in String(can not use predefined function)
+
+        console.log(" 8) Most Commonly Used two Character in String(can not use predefined function):");
+        var t="Hii i am ram"
+        var conc=""
+        for(i=0;i<t.length;i++){
+            var cont=0;
+            for(j=0;j<t.length;j++){
+                if(t[i]===t[j]){
+                    cont++;
+                }
+            }
+            if(cont>=2 && conc.indexOf(t[i])===-1){
+                conc += t[i]
+            }
+        }
+        console.log(conc  + " are the most commonly using character ")
+
+
+        // 9) Write Program to remove duplicate elements in an array and sort it in descending order(can not use predefined function).
+
+        console.log(" 9) Write Program to remove duplicate elements in an array and sort it in descending order(can not use predefined function):");
+        var t=[5,3,5,2,1,1,7,3,5,6]
+        var e=[]
+        for(i=0;i<t.length;i++){
+            if(e.indexOf(t[i])==-1){
+                e.push(t[i])
+            }
+        }
+        let con;
+        for(w=0;w<e.length;w++){
+            for(r=w+1;r<e.length;r++){
+                if(e[w]<e[r]){
+                    con=e[w];
+                    e[w]=e[r];
+                    e[r]=con
+                }
+            }
+        }console.log(e)
+
+
+        // 10) Write a Program to Remove brackets from an algebraic expression(can not use predefined function).
+
+        console.log(" 10) Write a Program to Remove brackets from an algebraic expression(can not use predefined function):");
+        var ex= "a + b-(9+c)=3"
+        var conc1=""
+        for(i=0;i<ex.length;i++){
+        if(ex[i]!=="(" && ex[i]!==")" ){
+            conc1+= ex[i]
+        }
+        }console.log(conc1)
+
+        // 11)Write Program to remove duplicate elements in an array and sort it in Ascending order(can not use predefined function).
+        
+        console.log(" 11) Write Program to remove duplicate elements in an array and sort it in Ascending order(can not use predefined function):");
+        var asce=["Z","A","P","C","A","Z","K","N","C"]
+        var as1=[]
+        for(sa1=0;sa1<asce.length;sa1++){
+            if(as1.indexOf(asce[sa1])===-1){
+                as1.push(asce[sa1])
+            }
+        }
+        var cns;
+        for(sd1=0;sd1<as1.length;sd1++){
+            for(sd2=sd1+1;sd2<as1.length;sd2++){
+                if(as1[sd1]>as1[sd2]){
+                    cns=as1[sd1];
+                    as1[sd1]=as1[sd2]
+                    as1[sd2]=cns
+                }
+            }
+        }console.log(as1)
+
+        // 12) If subseq's  array  sequence is present in the array, returns true or else returns false.  
+        
+        
+        let arra1 = [5, 7, 3, 2, 2, 7,-1, 5, -3, 13, 4];
+        let input=[7, -1, 5, -3]
+        z1=input.includes(arra1)
+        console.log(z1);
+ 
+
+
+        // 13)Find sum of the Unique numbers: 
+
+        console.log(" 13) Find sum of the Unique numbers:");
+        var mus=[1, 2, 2, 1, 3, 5, 1]
+        var m1=[]
+        for(ms1=0;ms1<mus.length;ms1++){
+            if(m1.indexOf(mus[ms1])===-1){
+                m1.push(mus[ms1]);
+            }
+        }
+        var ms=0;
+        for(dw=0;dw<m1.length;dw++){
+            ms+=m1[dw]
+        }console.log(ms)
+
+    </script>
+</body>
+</html>

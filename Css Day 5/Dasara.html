@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dasara</title>
+    <style>
+        body{
+            background-image: url(https://png.pngtree.com/background/20210714/original/pngtree-indian-festival-bow-and-arrow-dussehra-background-picture-image_1219772.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size:cover ;
+        }
+        .container{
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+        }
+        #rama,#ravana{
+            width: 200px;
+            position: absolute;
+            top: 0;
+        }
+        #rama{
+            left: 0;
+            height: 300px;
+            width: 400px;
+        }
+        #ravana{
+            right: 0;
+            opacity: 0;
+            position: absolute;
+            top:0;
+            right:0;
+            height: 500px;
+            transition: opacity 1s ease-in-out;
+        }
+        .arrow{
+            width: 300px;
+            height: 100px;
+            background:url(./images/Arro.jpeg) no-repeat center center;
+            background-size: cover;
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            animation: moveImage 5s linear infinite;
+        }
+        @keyframes moveImage{
+            0%{
+                left: 28%;
+            }
+            100%{
+                left: 60%;
+            }
+        }
+            #im1{
+                position: absolute;
+            top:0;
+            right:0;
+            transition: opacity 1s ease-in-out;
+            height: 200px;
+            width: 300px;
+            }
+        p{
+            margin-top: 25%;
+            margin-left: 40%;
+            font-size: 40px;
+            width: 400px;
+        }
+    
+
+        
+    </style>
+</head>
+<body>
+    <button style="margin-left:80% ;" id="toggle">Toggle Image</button>
+   <div class="container" >
+    <img id="rama" src="./images/Rama.jpg" alt="rama">
+    <img id="im1" src="./images/Text.png" alt="text">
+    <img id="ravana" src="images/ravan.png" alt="ravana">
+    <div class="arrow"></div>    
+    </div>
+    <script src="script.js"></script>
+    <p><b>May this DASARA bring an abundance of positive energy,helping us conquer our fears and reach our goals.  </b></p>
+</body>
+</html>

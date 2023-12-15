@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy level Problems</title>
+</head>
+<body>
+    <script>
+
+        // 1)Create a function that takes two numbers as arguments and returns their sum.
+
+        console.log("1) function that takes two numbers as arguments and returns their sum:");
+        function sum(a,b){
+            return(a+b);
+        }
+        console.log(sum(2,5));
+
+        // 2)Write a function that takes an integer minutes and converts it to seconds.
+
+        console.log("2) function that takes an integer minutes and converts it to seconds:");
+        function second(a){
+            return(a*60)
+        }
+        console.log(second(2));
+
+        // 3)Create a function that takes a number as an argument, increments the number by +1 and returns the result.
+
+        console.log("3) function that takes a number as an argument, increments the number by +1 and returns the result:");
+        function incre(a){
+            return(a+1)
+        }
+        console.log(incre(5));
+
+        // 4)Create a function that takes the age in years and returns the age in days.
+
+        console.log("4) function that takes the age in years and returns the age in days:");
+        function age(b){
+            return(b*365)
+        }
+        console.log(age(22));
+
+        // 5)Create a function that takes voltage and current and returns the calculated power.
+
+        console.log("5) function that takes voltage and current and returns the calculated power:");
+        function power(a,b){
+            return(a*b)
+        }
+        console.log(power(2,5));
+
+        // 6)Write a function that returns the string "something" joined with a space " " and the given argument a.
+
+        console.log("6) function that returns the string something joined with a space and the given argument a:");
+        function space(a){
+            return("Something" + " "+ a)
+        }
+        console.log(space("example"));
+
+        // 7)Create a function that takes two arguments. Both arguments are integers, a and b. Return true if one of them is 10 or if their sum is 10.
+
+        console.log("7) function that takes two arguments. Both arguments are integers, a and b. Return true if one of them is 10 or if their sum is 10:");
+        function s1(a,b){
+            if(a===10 || b === 10 || a+b ===10){
+                console.log(true);
+            }
+            else{
+                console.log(false);
+            }
+        }
+        s1(5,20)   
+        
+        // 8)Create a function that takes two strings as arguments and returns either true or false depending on whether the total number of characters in the first string is equal to the total number of characters in the second string.
+        
+        console.log("8) function that takes two strings as arguments and returns either true or false depending on whether the total number of characters in the first string is equal to the total number of characters in the second string:");
+        function str(str1,str2){
+            if(str1.length === str2.length){
+                console.log(true);
+            }
+            else{
+                console.log(false);
+            }
+        }
+        str("hello","world")
+
+        // 9) Create a function that takes a name and returns a greeting in the form of a string. Don't use a normal function, use an arrow function.
+        
+        console.log(" 9) Create a function that takes a name and returns a greeting in the form of a string. Don't use a normal function, use an arrow function:");
+        var greet1=(n)=>{
+            console.log("Hello " + n)
+        }
+        greet1("World")
+
+         // 10)Create a function that takes an array of 10 numbers (between 0 and 9) and returns a string of those numbers formatted as a phone number.
+
+         console.log(" 10) Create a function that takes an array of 10 numbers (between 0 and 9) and returns a string of those numbers formatted as a phone number :");
+        function ph(nu){
+        if(nu.length!=10){
+        console.log("Not a phone number")
+        }
+        let format1=`(${nu[0]}${nu[1]}${nu[2]})${nu[3]}${nu[4]}${nu[5]}-${nu[6]}${nu[7]}${nu[8]}${nu[9]}`
+        return format1
+        }console.log(ph([5,5,5,5,5,5,5,5,5,5]));
+
+
+        //11) Create a function that returns an array of strings sorted by length in ascending order.
+
+        console.log(" 11) Create a function that returns an array of strings sorted by length in ascending order:");
+        function alp(asc){
+        let format2=asc.sort();
+        return format2;  
+        }console.log(alp([ "a","ccc","bb","dddd"]));
+
+
+        // 12)Create a function that takes an array of arrays with numbers. Return a new (single) array with the largest numbers of each.
+
+        console.log(" 12) Create a function that takes an array of arrays with numbers. Return a new (single) array with the largest numbers of each:");
+        var b=[];
+        function ar(arrays){
+        for(s=0;s<arrays.length;s++){
+        let current=arrays[s][0];
+        for(s1=1;s1<arrays[s].length;s1++){
+        if (arrays[s][s1]>current){
+        current =arrays[s][s1]
+        }
+        }
+        b.push(current);
+        }console.log(b);
+        }
+        ar([[1,2,3],[4,5,6],[7,8,9,0]]);
+        
+
+        // 13) Create a function that takes an array of numbers and returns the second largest number.
+
+        console.log("13) Create a function that takes an array of numbers and returns the second largest number:");
+        var co=0;
+        function larg(nu){
+        for(n=nu.length-1;n>0;n--){
+        if(nu[n]!=nu[n-1]){
+        console.log(nu[n-1]);
+        break;
+        }
+        }
+        }larg([10,20,30,40,50])
+        
+
+        // 14)Create a function that takes an array of items, removes all duplicate items and returns a new array in the same sequential order as the old array (minus duplicates).
+
+        console.log(" 14) Create a function that takes an array of items, removes all duplicate items and returns a new array in the same sequential order as the old array (minus duplicates):");
+        let cp1=[];
+        function ne(du){
+        for(zx=0;zx<du.length;zx++){
+        if(cp1.indexOf(du[zx])===-1){
+        cp1.push(du[zx]);
+        }
+        }console.log(cp1)
+        }ne([1,2,0,2,1,0,0,0,-1,-2,-1,-2,-2])
+
+
+        //15) Create a function that takes an array of integers as an argument and returns a unique number from that array. All numbers except unique ones have the same number of occurrences in the array.
+
+        console.log(" 15)Create a function that takes an array of integers as an argument and returns a unique number from that array. All numbers except unique ones have the same number of occurrences in the array:");
+        function unq(de){
+            for(let ae=0;ae<de.length;ae++){
+                var cnt=0;
+                for(let eu=0;eu<de.length;eu++){
+                    if(de[ae]==de[eu]){
+                        cnt++;
+                    }
+                }
+                if(cnt==1){
+                    return de[ae] + " is the unique number.";
+                }
+            }
+            return null;
+        }
+        console.log(unq([1,2,3,4,3,2,1])); 
+
+
+        // 16) Create a function that takes two strings as arguments and returns the number of times the first string (the single character) is found in the second string.
+
+        console.log("16) Create a function that takes two strings as arguments and returns the number of times the first string (the single character) is found in the second string:");
+        coun=0;
+        function se(z,g){
+            for(l=0;l<g.length;l++){
+               var h=g[l];
+                if(h==z){
+                    coun++;
+                }
+            }
+            console.log(coun);
+        }
+        se("i","kiwi")
+
+        // 17) Create a function that takes a string and returns the number (count) of vowels contained within it.
+
+        console.log("17) Create a function that takes a string and returns the number (count) of vowels contained within it:");
+        var count1=0;
+        function s2(vow){
+            for(p=0;p<vow.length;p++){
+                vow[p]
+                if(vow[p]=="a" || vow[p]=="i"|| vow[p]=="o"|| vow[p]=="e"||vow[p]=="u"){
+                count1++;
+                }
+            }
+            console.log(count1);
+        }
+        s2("mississippi")
+
+
+        // 18) Given a string, create a function to reverse the case. All lower-cased letters should be upper-cased, and vice versa.
+
+        console.log("18) Given a string, create a function to reverse the case. All lower-cased letters should be upper-cased, and vice versa:");
+        var te= " ";
+        function up(st){
+        for(d=0;d<st.length;d++){
+        if(st[d]==st[d].toUpperCase()){
+        te=te+st[d].toLowerCase();
+        }
+        else{
+        te=te+st[d].toUpperCase();
+        }
+        }
+        console.log(te)
+        }
+        up("Happy Birthday")
+
+        // 19)  Take one integer n, loop till n and pass each value to a function, create a function that takes one integer parameter, and multiply with 2 in every integer.
+
+        console.log(" 19) Take one integer n, loop till n and pass each value to a function, create a function that takes one integer parameter, and multiply with 2 in every integer:");
+        function ite(h){
+            for(i=1;i<=h;i++){
+                console.log(i*2);
+            }
+        }
+        ite(5)
+
+        // 20) Create Function that will take one parameter and return type of the data.
+
+        console.log(" 20) Create Function that will take one parameter and return type of the data:");
+        var tp="";
+        function type(val){
+            if(typeof(val)=="string"){
+                console.log(val + " is a character");
+            }
+            else if(typeof(val)=="number"){
+                console.log(val + " is a integer");
+            }
+            else{
+                console.log(val + " is neither a integer nor a character");
+            }
+        }
+        type(1)
+
+        // 21)  Program to find greatest of three numbers(using ternary operator).
+
+        console.log(" 21) Program to find greatest of three numbers(using ternary operator):");
+        var s1=12;
+        var s2=34;
+        var s3=8;
+
+        var great =(s1>s2) ? ((s1>s3) ? s1:s3) : ((s2>s3)? s2:s3);
+        console.log(great + " is the greatest number" );
+
+        // 22) Program to find factorial of number.
+
+        console.log(" 22) Program to find factorial of number:");
+        var f2=8;
+        let fac=1;
+        for(i=1;i<=f2;i++){
+            fac =fac*i;
+        }
+        console.log(fac);
+
+        // 23)  Program to arrange numbers in ascending order
+
+
+        console.log("23) Program to arrange numbers in ascending order:");
+        let c1;
+        let ad1=[5,2,1,3,4]
+        for(z1=0;z1<ad1.length;z1++){
+        for(z2=z1+1;z2<ad1.length;z2++){
+        if(ad1[z1]>ad1[z2]){
+        c=ad1[z1];
+        ad1[z1]=ad1[z2]
+        ad1[z2]=c
+        }
+        }
+        }
+        console.log(ad1)
+
+        // 24) Write a program to  print triangle pattern numbers.
+
+        console.log(" 24) Write a program to  print triangle pattern numbers:");
+        var s1="";
+        for(i=1;i<=5;i++){
+            s1= s1+ " "+ i;
+            console.log(s1);
+        }
+
+        // 25) Program to Calculate the Power of a Number(using loop only).
+
+        console.log(" 25)Program to Calculate the Power of a Number(using loop only):");
+        var po=1;
+        var bas=2;
+        var po2=5;
+        while(po2--){
+            po *=bas
+        }
+        console.log(po)
+
+        // 26) Program to Check Whether a Number is Prime or Not
+
+        console.log(" 26) Program to Check Whether a Number is Prime or Not:");
+        var d90=4;
+        var fact=0;
+        for(d4=0;d4<=d90;d4++){
+            if(d90%d4==0){
+                fact++;
+            }
+        }
+        if(fact==2){
+            console.log(d90 + " is a prime number");
+        }
+        if(fact!=2){
+            console.log(d90 + " is not a prime number");
+        }
+
+        // 27)Program to find LCM of two numbers using while loop
+
+
+        console.log(" 27) Program to find LCM of two numbers using while loop:");
+        var a=12;
+        var b=20;
+        var min=0;
+        if(a>b){
+        min=a;
+        }
+        else{
+        min=b;
+        }
+        while(true){
+        if(min%a==0 && min %b==0){
+        console.log(`The LCM of ${a} and ${b} is ${min}`);
+        break;
+        }
+        min++
+        }
+
+
+        // 28) Program to Display Characters from A to Z Using Loop with count.
+
+        console.log(" 28) Program to Display Characters from A to Z Using Loop with count:");  
+        var er="";    
+        var g9;
+        var q2='A'.charCodeAt(0);
+        for(et=65;et<91;et++){
+        g9=String.fromCharCode(et)
+        let coun1=et-q2+1;
+        er=er+ " "+g9+coun1
+        
+        }console.log(er)
+
+        // 29)Program to find a missing number
+
+        console.log(" 29) Program to find a missing number:");
+        var ami=[1,2,4,5];
+        var bq=ami[0];
+        for(ew=0;ew<ami.length;ew++){
+        if(ami[ew]==bq){
+        bq++
+        }
+        }
+        console.log(bq)
+
+       
+
+        // 30) Program to count vowels and consonants in a given String.
+
+        console.log(" 30) Program to count vowels and consonants in a given String.:");
+        var codd="kiwi";
+        var vo_cou=0;
+        var c_co=0;
+        for(j7=0;j7<codd.length;j7++){
+            codd[j7]
+            if(codd[j7]=="a" || codd[j7]=="e" ||codd[j7]=="i" || codd[j7]=="o" || codd[j7]=="u"){
+                vo_cou++;
+            }
+            else{
+                c_co++;
+            }
+        }
+        console.log(vo_cou + " is the count of vowels ");
+        console.log(c_co + " is the count of consonants ");
+
+        // 31) program to insert  the elements of an array for specific index.
+
+        console.log(" 31) Program to insert  the elements of an array for specific index:");
+        let a21 = [1,2,3,4,5,7,8,9,10];
+        a21.splice(5,0,6)
+        console.log(a21);
+
+        // 32)Reverse a number using while Loop
+
+        console.log(" 32) Reverse a number using while Loop:");
+        let ab1=123;
+        let r;
+        let su1="";
+        while(ab1>0){
+        r=ab1%10;
+        su1+=r
+        ab1=parseInt(ab1/10);
+        }
+        console.log(parseInt(su1))
+        
+        // 33) Count occurrence of number:
+
+        console.log(" 33) Count occurrence of number:");
+        let n12=7;
+        let count=0;
+        let a11 =  [1,6,3,1,5,9,7,2,1,9,3,7,8,9,10];
+        for(s=0;s<a11.length;s++){
+        if(a11[s]==n12){
+        count++
+        }
+        }
+        console.log(n12 + " Occurs " + count +" times")
+
+        
+
+    </script>
+</body>
+</html>

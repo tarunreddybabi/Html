@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1) Create a function that converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized only if the original word was capitalized.
+         
+        console.log(" 1) Create a function that converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized only if the original word was capitalized:");
+        function con(cam){
+        var z="";
+        for(w=0;w<cam.length;w++){
+        if(cam[w]=="-"||cam[w]=="_"){
+        z+=cam[w+1].toUpperCase()
+        w++;
+        }
+        else{
+        z+=cam[w];
+        }
+        }console.log(z)
+        }con("the-stealth-warrior")
+        
+
+        // 2)Create a function that takes an array of strings and returns an array with only the strings that have numbers in them. If there are no strings containing numbers, return an empty array.
+
+        console.log(" 2) Create a function that takes an array of strings and returns an array with only the strings that have numbers in them. If there are no strings containing numbers, return an empty array:");
+        function num(n1){
+            for(n2=0;n2<n1.length;n2++){
+                if(n1>="0" && n1<="9"){
+                    return true;
+                }
+            }return false;
+        }   
+         str=["1a", "a", "2b", "b"]
+         var cont=[]
+        for(n1 of str){
+            if(num(n1)) {
+                cont.push(n1)
+            }
+        }console.log(cont)
+             
+        // 3) Write a function that takes a list of hours and returns the total weekly salary.
+        // The input list hours is listed sequentially, ordered from Monday to Sunday.
+        // A worker earns $10 an hour for the first 8 hours.
+        // For every overtime hour, he earns $15.
+        // On weekends, the employer pays double the usual rate, regardless how many hours were worked previously that week. 
+
+
+        function sal(hour){
+        let salary=0;
+        let sl2=0
+        let extra=0;
+        if(hour.length!=7){
+        return "Input is not correct make it into the length of 7 character"
+        }
+        for(l=0;l<5;l++){
+            let sl=0
+        if(hour[l]>8){
+        extra=hour[l]-8;
+        sl+=8*10+extra*15;
+        salary+=sl;
+        }
+        else {
+        salary+=hour[l]*10
+        }
+        }for(k=5;k<7;k++){
+            sl2=0
+            if(hour[k]<=8){
+                salary+=hour[k]*20
+            }
+            else {
+            extra=hour[k]-8;
+            sl2+=8*20+extra *30
+            salary+=sl2
+            }
+        }
+        console.log(salary)
+        }
+
+        sal([0, 0, 0, 0, 0, 12, 0])
+
+        // 6)  Given a String(Note:- String Will Contain all later from A-Z except 1 letter, that letter you need to find out) :-
+
+        console.log(" Given a String(Note:- String Will Contain all later from A-Z except 1 letter, that letter you need to find out)s:");
+        alp="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        a="6 E @ f w 3 x y g N 1 o p Q A b c h i j # K l d m R T U V Z";
+        b=a.toUpperCase()
+        for(i=0;i<alp.length;i++){
+        if(!b.includes(alp[i])){
+        console.log(alp[i] + " is missing" )
+        }
+        }
+        
+        
+    </script>
+</body>
+</html>

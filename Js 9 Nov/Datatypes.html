@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul li{
+            font-size: larger;
+        }
+        p{
+            font-size: larger;
+        }
+        body{
+            background-color: #0093E9;
+            background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+
+        }
+    </style>
+</head>
+<body>
+
+    
+    <details>
+        <summary style="font-size: 23px;"><strong style="font-size: 30px;">Variables</strong></summary>
+        <p><b>In JavaScript, variables are used to store and manage data in your programs. JavaScript has three keywords for declaring variables: `var`, `let`, and `const`. <br> These keywords have different behavior and scoping rules.</b></p>
+        <p><b style="font-size: larger;">'Var' ( Function-Scoped or Global-Scoped):</b></p>
+        <ul>
+            <li> Variables declared with `var` are function-scoped, meaning they are accessible within the function in which they are declared.</li>
+            <li>Variables declared with `var` are also hoisted, which means they are moved to the top of their containing function or global scope during the compilation phase.</li>
+            <li>'var` variables can be re-declared within the same scope.</li>
+        </ul>
+        
+        <p><b style="font-size: larger;">'Let' (Block-Scoped):</b></p>
+        <ul>
+            <li>Variables declared with `let` are block-scoped, meaning they are accessible only within the block in which they are defined (block can be a function, loop, or any code enclosed in curly braces).</li>
+            <li>Variables declared with `let` are also hoisted, but they are not initialized until the point in the code where they are declared. This is known as the "temporal dead zone."</li>
+            <li>`let` variables cannot be re-declared within the same scope.</li>
+        </ul>
+
+        <p><b style="font-size: larger;">'Const' (Block-Scoped):</b></p>
+        <ul>
+            <li>Variables declared with `const` are also block-scoped.</li>
+            <li>`const` variables must be initialized at the time of declaration and cannot be changed (reassigned) after initialization. However, the value of a `const` object or array can be mutated.</li>
+        </ul>
+        <img width="550px" height="350px" src="./Image/variables.png" alt="code">
+        <video height="350px" width="550px" controls>
+            <source src="./Image/Var.mp4" type="video/mp4">
+        </video>
+    </details>
+ 
+ <br>
+    <details>
+        <summary style="font-size: 23px;"><strong style="font-size: 30px;">Data-Types</strong></summary>
+        <p><b>JavaScript has several data types that can be broadly categorized into two main categories: PRIMITIVE DATA TYPES AND REFERENCE DATA TYPES.</b></p>
+        <video height="350px" width="550px" controls>
+            <source src="./Image/Data-Types.mp4" type="video/mp4">
+        </video>
+        <p style="font-size: larger;"><b>PRIMITIVE DATA TYPES:</b></p>
+        <p>
+            <b>1. Number:</b> Represents numeric values, including integers and floating-point numbers. Examples: `10`, `3.14`.
+            <br><br>
+            <b>2. String:</b> Representing textual data in quotations is known as String. Examples: `"Hello, World!"`, `'JavaScript'`.
+            <br><br>
+            <b>3. Boolean:</b> Represents true or false values. Examples: `true`, `false`.
+            <br><br>
+           <b> 4. Undefined:</b> Represents a variable that has been declared but has not been assigned a value. 
+            <br><br>
+             <b>5. Null:</b> Represents an intentional absence of any object value or no value.
+            <br><br>
+            <img width="550px" height="600px" src="./Image/Primitive data types.png" alt="data">
+            </p>
+
+            <p style="font-size: larger;"><b>REFERENCE DATA TYPES:</b></p>
+
+        <p>
+
+            <b>1. Object:</b> Represents complex data structures and is used for collections of data, functions, or methods. Objects are key-value pairs, where the keys are strings (or Symbols) and the values can be any data type.
+            <br><br>
+            <b>2. Array:</b> A special type of object used for storing an ordered list of values. Elements in an array can be of any data type.
+            <br><br>
+            <b>3. Function:</b> Functions are objects, and they can be assigned to variables, passed as arguments, and returned from other functions. Functions are used to perform specific tasks or calculations.
+            <br>
+            <img width="550px" height="600px" src="./Image/Reference data types.png" alt="Reference data">
+            </p>
+
+    </details>
+    <br>
+
+    <details>
+        <summary style="font-size: 23px;"><strong style="font-size: 30px;">Operators</strong></summary>
+        <p><b>JavaScript includes a variety of operators that allow you to perform different operations on values. Here's an overview of some of the main types of operators in JavaScript:
+        </b></p>
+
+        <p style="font-size: larger;"><b>1. Arithmetic Operators:</b></p>
+
+        <p>
+               1. + (Addition)
+               2. - (Subtraction)
+               3. * (Multiplication)
+               4. / (Division)
+               5. % (Modulus)
+               6. ++ (Increment)
+               7. -- (Decrement)
+    
+   
+    
+   
+
+            <img width="550px" height="600px" src="" alt="data">
+            </p>
+            <br>
+
+            <p style="font-size: larger;"><b>2. Assignment Operators:</b></p>
+
+        <p>
+             = (Assignment)
+
+             +=, -=, *=, /= (Compound Assignment)
+
+            <img width="550px" height="600px" src="" alt="Reference data">
+            </p>
+            <br>
+
+            <p style="font-size: larger;"><b>3. Comparison Operators:</b></p>
+
+            <p>
+                   1. = = (Equality)
+                   2. = = = (Strict Equality)
+                   3. != (Inequality)
+                   4. != = (Strict Inequality)
+                   5. > (Greater Than)
+                   6. < (Less Than)
+                   7. >= (Greater Than or Equal To)
+                   8. <= (Less Than or Equal To)       
+    
+                <img width="550px" height="600px" src="" alt="data">
+                </p>
+                <br>
+
+                <p style="font-size: larger;"><b>4. Logical Operators:</b></p>
+
+            <p>
+                   1. && (Logical AND)
+                   2. || (Logical OR)
+                   3. ! (Logical NOT)
+                     
+    
+                <img width="550px" height="600px" src="" alt="data">
+                </p>
+                <br>
+
+                <p style="font-size: larger;"><b>5. Unary Operators:</b></p>
+
+                <p>
+                       1. + (Unary Plus)
+                       2. - (Unary Minus)
+                       3. ++ (Prefix and Postfix Increment)
+                       4. -- (Prefix and Postfix Decrement)
+        
+                    <img width="550px" height="600px" src="" alt="data">
+                    </p>
+                    <br>
+
+                    <p style="font-size: larger;"><b>6. Ternary Operators:</b></p>
+
+                    <p>
+                         ? : (Conditional Operator)
+                     
+                        <img width="550px" height="600px" src="" alt="data">
+                        </p>
+                        <br>
+
+                    
+                        <p style="font-size: larger;"><b>7. Bitwise Operators:</b></p>
+
+                        <p>
+                            1.  & (Bitwise AND)
+                            2. | (Bitwise OR)
+                            3. ^ (Bitwise XOR)
+                            4. ~ (Bitwise NOT)
+                            5. << (Left Shift)
+                            6. >> (Right Shift)
+                            7. >>> (Unsigned Right Shift)
+
+             
+                         <img width="550px" height="600px" src="" alt="data">
+                         </p>
+
+
+    </details>
+</body>
+</html>

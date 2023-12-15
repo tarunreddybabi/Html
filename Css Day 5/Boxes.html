@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        .div1{
+        width: 200px;
+        height: 200px;
+        position: relative;
+        animation-name: moveright;
+        animation-timing-function: ease-in-out;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes moveright {
+        0%   {background-color:red; left:0px; top:0px;}
+        25%  {background-color:yellow; left:500px;}
+        50%  {background-color:blue; left:1000px; }
+        75%  {background-color:green; left:500px;}
+        100% {background-color:red; left:0px;}      
+    }
+    .div2{
+        width: 200px;
+        height: 200px;
+        margin-left: 1000px;
+        position: relative;
+        animation-name: moveleft ;
+        animation-timing-function: ease-in-out;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes moveleft {
+        0%   {background-color:red; right:0px; top:55%;}
+        25%  {background-color:yellow; right:500px; }
+        50%  {background-color:blue; right:1000px; }
+        75%  {background-color:green; right:500px; }
+        100% {background-color:red; right:0px;}      
+    }
+
+    </style>
+</head>
+<body>
+    <h1>CSS Animation</h1>
+    <h2>Move From Left To Right</h2>
+    <div class="div1"></div>
+    <br><br>
+    <h2>Move From Right To Left</h2>
+    <div class="div2"></div>
+</body>
+</html>

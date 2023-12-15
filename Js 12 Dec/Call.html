@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = {
+        hello1: "hello",
+        hello2: function (a, b) {
+          console.log(a, b);
+          return this;
+        },
+      };
+      let ob = {
+        name: "tarun",
+        age: 22,
+      };
+      let x = a.hello2.bind(ob, "he", "32");
+      console.log(x);
+
+      let b = {
+        h: "hi",
+        f: function (d, s) {
+          console.log(d, s);
+          return this;
+        },
+      };
+      let js = {
+        name: "S",
+        age: 43,
+      };
+      console.log(b.f.call(js, "ds", "hd"));
+      console.log(b.f.apply(js, ["h", "i"]));
+    </script>
+  </body>
+</html>

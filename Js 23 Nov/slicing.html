@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>String Slicing</h1>
+    <h2>Output is</h2>
+    <h3 id="e"></h3>
+    <script>
+        var v="banana";
+        function sl(a,b){
+        for(p=a;p<b;p++){
+        console.log(v[p]);
+        }
+        }
+        sl(2,5)
+
+        var s=" ";
+        function sp(z,x){
+            var a="how are you";
+            for(i=a.length+z;i<=a.length+x;i++){
+                s=s+a[i];
+            }
+            console.log(s);
+            }
+            sp(-8,-4)
+            document.getElementById("e").innerHTML= s;
+    </script>
+</body>
+</html>

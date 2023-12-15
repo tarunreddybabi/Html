@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array understanding Problems</title>
+</head>
+<body>
+    <script>
+        // 1. **Sum of Array Elements**: Write a function that calculates the sum of all the elements in an array.
+
+        console.log("1. **Sum of Array Elements**: Write a function that calculates the sum of all the elements in an array:");
+        var s2=0
+        function su1(ar1){
+            for(suu1=0;suu1<ar1.length;suu1++){
+                s2=s2+ar1[suu1];
+            }
+            console.log(s2);
+        }
+        su1([1,2,3,4,5,6,7,8,9,10])
+
+        // 2. **Find Maximum Value**: Write a function that finds the maximum value in an array of numbers.
+
+        console.log("2. **Find Maximum Value**: Write a function that finds the maximum value in an array of numbers:");
+        let ma=0;
+        function ma_va(va){
+            for(va1=0;va1<va.length;va1++){
+                if(va[va1]>ma){
+                    ma=va[va1]
+                }
+            }
+            console.log(ma);
+        }
+        ma_va([1,2,3,1,11,33,42,12,4532,2,3,2112,3])
+
+        // 3. **Filter Even Numbers**: Write a function that filters out all even numbers from an array and returns a new array with only the even numbers.
+
+        console.log("3. **Filter Even Numbers**: Write a function that filters out all even numbers from an array and returns a new array with only the even numbers:");
+        var fi1=[];
+        function fil(fil2){
+            for(f1=0;f1<fil2.length;f1++){
+                if(fil2[f1]%2==0){
+                    fi1.push(fil2[f1])
+                }
+            }
+            console.log(fi1);
+        }fil([1,2,3,4,5,6,7,8,9,10,20,30,43,47,39,42,68,90,100])
+
+        // 4. **Count Occurrences**: Write a function that counts the number of times a specific element appears in an array.
+
+        console.log("4. **Count Occurrences**: Write a function that counts the number of times a specific element appears in an array:");
+        var occurr=0;
+        var app=1; // Enter by user
+        function oc1(cou){
+            for (in1=0;in1<cou.length;in1++) {
+                if(cou[in1]==app){
+                    occurr++;
+                }
+            }console.log(occurr);     
+        }oc1([1,2,3,4,2,1,1,1,112,3,3,3,1,1,1,21,,1,11,1,1,1,1,1,1,1,1,1,1,11,])
+
+        // 5. **Reverse an Array**: Write a function that reverses the elements in an array without using the built-in `reverse()` method.
+
+        console.log("5. **Reverse an Array**: Write a function that reverses the elements in an array without using the built-in `reverse()` method:");
+        var r2=[];
+        var zw="";
+        function rev(re){
+            for(re1=re.length-1;re1>=0;re1--){  
+                zw=zw +re[re1];
+            }
+            r2.push(zw);
+            console.log(r2);
+        }rev("tarun reddy")
+
+        // 6. **Flatten an Array**: Write a function that flattens a nested array (an array of arrays) into a single array.
+
+        console.log("6. **Flatten an Array**: Write a function that flattens a nested array (an array of arrays) into a single array:");
+        function fla(f11){
+            console.log(f11.flat(3));
+        }fla([1,2,[3,4,5,[6,7,8]]])
+
+        // 7. **Remove Duplicates**: Write a function that removes duplicate elements from an array while preserving the original order.
+
+        console.log("7. **Remove Duplicates**: Write a function that removes duplicate elements from an array while preserving the original order:");
+        var d2=[];
+        function dup(du1){
+            for(du=0;du<du1.length;du++){
+                if(d2.indexOf(du1[du])===-1){
+                    d2.push(du1[du])
+                }
+            }
+            console.log(d2);
+        }dup([1,2,3,4,4,4,4,4,3,3,3,3,22,2,5,5,6,6,6,6,7,7,13,8,230,9,8,4,6])
+
+        // 8. **Find Common Elements**: Write a function that finds and returns the common elements between two arrays.
+
+        console.log("8. **Find Common Elements**: Write a function that finds and returns the common elements between two arrays:");
+        let cv1=[];
+        function com(co1,co2){
+            for(let c1=0;c1<co1.length;c1++){
+                    if(co2.includes(co1[c1])){
+                        cv1.push(co1[c1]);
+                    }
+                
+            }
+            console.log(cv1);
+        }com([1,2,4,3,21,32,3],[0,9,8,2,1,34,4,55])
+
+        // 9. **Rotate Array**: Write a function that rotates the elements of an array to the right by a given number of positions.
+
+        console.log("9. **Rotate Array**: Write a function that rotates the elements of an array to the right by a given number of positions:");
+        function rot(el,po){
+            let bs=[]
+            let js=0
+            for(w=0;w<el.length;w++){
+                if(el[w+po]==undefined){
+                    bs.push(el[js])
+                    js++
+                }
+                else{
+                    bs.push(el[w+po])
+                }
+            }console.log(bs)
+        }rot([1,2,3,4,5,6],4)
+
+        // 10. **Two Sum Problem**: Given an array of numbers and a target value, write a function that returns an array of two numbers from the input array that add up to the target.
+
+        console.log("10. **Two Sum Problem**: Given an array of numbers and a target value, write a function that returns an array of two numbers from the input array that add up to the target");
+        function twosum(ar2,target){
+            for(h=0;h<ar2.length;h++){
+                for(k=0;k<ar2.length;k++){
+                    var ed=[];
+                    if(ar2[h]+ar2[k]==target){
+                        ed.push(ar2[h])
+                        ed.push(ar2[k])
+                        console.log(ed)
+                    }
+                }
+            }
+        }twosum([1,2,3,4,5,6,7,8,9],8)
+
+
+        // 11. **Sort Without Built-in Methods**: Write a sorting function (e.g., bubble sort or quicksort) to sort an array of numbers without using JavaScript's built-in sorting methods.
+
+        console.log("11. **Sort Without Built-in Methods**: Write a sorting function (e.g., bubble sort or quicksort) to sort an array of numbers without using JavaScript's built-in sorting methods:");
+        let co;
+        function srt(sr1){
+            for(i1=0;i1<sr1.length;i1++){
+                for(i2=i1+1;i2<sr1.length;i2++){
+                    if(sr1[i1]>sr1[i2]){
+                        c=sr1[i1];
+                        sr1[i1]=sr1[i2];
+                        sr1[i2]=c;
+                    }
+                }
+            }
+            console.log(sr1);
+        }srt([1,23,19,85,54,76,209,34])
+
+        // 12. **Array Chunking**: Write a function that divides an array into smaller arrays of a specified size
+
+        console.log("12. **Array Chunking**: Write a function that divides an array into smaller arrays of a specified size:");
+        function chunk(at,size){
+            while(at.length!=0){
+                fg=[]
+                fg=at.splice(0,size)
+                if(fg.length==size){
+                    console.log(fg)
+                }
+            }            
+        }chunk([1,2,3,4,5,6,7,8,9,0],3)
+
+        // 13. **Array Intersection**: Write a function that returns the elements common to multiple arrays.
+
+        console.log("13. **Array Intersection**: Write a function that returns the elements common to multiple arrays.:");
+        function integ(a,b){
+            c=[]
+            for(o=0;o<a.length;o++){
+                for(p=0;p<b.length;p++){
+                    if(a[o]==b[p]){
+                        c.push(a[o])
+                    }
+                }
+            }console.log(c)
+        }
+        integ([1,2,3,4,5],[4,5,6,7,8])
+
+    
+
+        // 14. Create a function that takes an array of items, removes all duplicate items and returns a new array in the same sequential order as the old array (minus duplicates).
+
+        console.log("14) Create a function that takes an array of items, removes all duplicate items and returns a new array in the same sequential order as the old array (minus duplicates):");
+        let ca=[];
+        function dupl(d11){
+            for(d=0;d<d11.length;d++){
+                if(ca.indexOf(d11[d])===-1){
+                    ca.push(d11[d]);
+                }
+            }console.log(ca);
+        }dupl([1,2,3,2,23,2])
+
+        // 17. **Array Frequency Count**: Write a function that counts the frequency of each element in an array and returns an object with the counts.
+
+        console.log("17. **Array Frequency Count**: Write a function that counts the frequency of each element in an array and returns an object with the counts");
+        function frequ(g){
+            for(y=0;y<g.length;y++){
+                var l=[]
+                var tn=0;
+                for(e=0;e<g.length;e++){
+                    if(g[y]==g[e]){
+                        tn++
+                    }
+                    else{
+                        l.push(g[e])
+                    }
+                } console.log(`${g[y]} : ${tn} times`);
+            g=l;
+            }
+           
+
+        }frequ([1,1,1,2,2,3,4,4,5,5,5,4,4,3,3,6,6,6,7,5,7,7])
+
+
+
+        // 18) Array Shuffle**: Write a function to shuffle the elements of an array randomly.
+        
+        console.log(" 18) Array Shuffle**: Write a function to shuffle the elements of an array randomly:");
+        function inte(array){
+        array.sort(function(){return 0.5- Math.random()});
+         console.log(array)
+                 }
+         inte([1,2,3,4,5]);
+        
+    </script>
+</body>
+</html>
