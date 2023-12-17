@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe</title>
+    <style>
+        /* Reset some default styles */
+        body, h1, h2, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Common styles for all screen sizes */
+        li {
+            list-style: none;
+        }
+
+        nav {
+            box-sizing: border-box;
+            background: #3498db;
+            height: 90px;
+            width: 100%;
+            z-index: 1;
+            position: fixed;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 24px;
+            color: white;
+        }
+
+        nav ul {
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            font-size: 17px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: black;
+            color: rgb(9, 250, 30);
+        }
+
+        /* Header styles */
+        .imgdiv {
+            position: relative;
+            text-align: center;
+            margin-top: 70px;
+        }
+
+        .cafeimage {
+            width: 100%;
+        }
+
+        .p1 {
+            position: absolute;
+            bottom: 40px;
+            background-color: black;
+            color: #3498db;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .h1,
+        .h2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgb(247, 9, 49);
+            font-size: 5vw;
+        }
+
+        .h2 {
+            top: 60%;
+            font-size: 4vw;
+            color: rgb(231, 6, 44);
+        }
+
+        /* About section styles */
+        .h3 {
+            background-color: black;
+            color: whitesmoke;
+            display: inline-block;
+            margin: 10px 5%;
+            padding: 10px;
+            font-size: 4vw;
+        }
+
+        .p2 {
+            margin: 10px 5%;
+            font-size: 2vw;
+        }
+
+        .im1 {
+            margin-top: 2%;
+            margin-left: 5%;
+            width: 90%;
+            height: auto;
+        }
+
+        .p3 {
+            margin: 10px 5%;
+            font-size: 2vw;
+        }
+
+        /* Menu section styles */
+        .h4 {
+            background-color: black;
+            color: whitesmoke;
+            display: inline-block;
+            margin: 10px 5%;
+            padding: 10px;
+            font-size: 4vw;
+        }
+
+        table {
+            width: 90%;
+            margin: 10px 5%;
+            border: 2px solid white;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 2vw;
+            text-align: left;
+            border: 2px solid white;
+        }
+
+        /* Image 2 styles */
+        .im2 {
+            margin: 10px 5%;
+            width: 90%;
+            height: auto;
+        }
+
+        /* Address section styles */
+        .h5 {
+            background-color: black;
+            color: whitesmoke;
+            display: inline-block;
+            margin: 10px 5%;
+            padding: 10px;
+            font-size: 4vw;
+        }
+
+        .fm {
+            margin: 10px 5%;
+            width: 90%;
+        }
+
+        .p4 {
+            margin: 10px 5%;
+            font-size: 2vw;
+        }
+
+        /* Form styles */
+        .f1 {
+            margin: 10px 5%;
+            width: 90%;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="datetime-local"],
+        input[type="button"] {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="button"] {
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Footer styles */
+        div {
+            background-color: black;
+            color: rgb(79, 12, 236);
+            text-align: center;
+            height: auto;
+            font-size: 2vw;
+            padding: 2vw;
+            margin-top: 20px;
+        }
+
+        @media screen and (max-width: 768px) {
+            /* Adjust styles for smaller screens */
+
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav h1 {
+                margin-left: 5%;
+            }
+
+            nav ul {
+                margin: 10px 5%;
+                justify-content: flex-start;
+                background-color: black;
+            }
+
+            nav ul li {
+                margin: 5px 0;
+            }
+
+            .h1 {
+                font-size: 8vw;
+            }
+
+            .h2 {
+                font-size: 6vw;
+            }
+
+            .h3,
+            .h4,
+            .h5 {
+                font-size: 6vw;
+            }
+
+            .p1,
+            .p2,
+            .p3,
+            .p4 {
+                font-size: 3vw;
+            }
+
+            table {
+                font-size: 3vw;
+            }
+
+            .f1 {
+                font-size: 3vw;
+            }
+
+            div {
+                font-size: 3vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <h1>The Cafe</h1>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Menu">Menu</a></li>
+            <li><a href="#Address">Address</a></li>
+        </ul>
+    </nav>
+    <br>
+    <div class="imgdiv">
+        <img class="cafeimage" width="100%" src="https://cdn.pixabay.com/photo/2017/06/10/16/22/coffee-2390136_1280.jpg" alt="cafe">
+    </div>
+    <hr>
+    <div>
+        <h1 class="h3" id="About" >About The Cafe</h1>
+        <p class="p2" >
+            The Cafe was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+    In addition to our full espresso and brew bar menu, we serve fresh made-to-order breakfast and lunch sandwiches, as well as a selection of sides and salads and other good stuff.
+        </p>
+        <img class="im1" src="https://www.w3schools.com/w3images/coffeeshop.jpg" alt="cafe">
+        <p class="p3">
+            <b>Opening Hours:</b>Everyday From 6am to 7pm <br><br>
+            <b>Address:</b> Kphb, Hyderabad
+        </p>
+    </div>
+    <hr>
+    <div>
+        <h1 class="h4" id="Menu" >The Menu</h1>
+        <table>
+            <tr>
+                <th>Eat</th>
+                <th>Price</th>
+                <th>Drink</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Bread Basket </td>
+                <td>80</td>
+                <td>Coffee</td>
+                <td>120</td>
+            </tr>
+            <tr>
+                <td>Honey Almond Granola with Fruits</td>
+                <td>350</td>
+                <td>Choclate</td>
+                <td>330</td>
+            </tr>
+            <tr>
+                <td>Belgian Waffle </td>
+                <td>70</td>
+                <td>Corretto </td>
+                <td>60</td>
+            </tr>
+            <tr>
+                <td>Scrambled eggs </td>
+                <td>180</td>
+                <td>Iced Tea</td>
+                <td>150</td>
+            </tr>
+            <tr>
+                <td>Blueberry Pancakes </td>
+                <td>220</td>
+                <td>Soda</td>
+                <td>50</td>
+            </tr>
+        </table>
+    </div>
+    <hr>
+    <div>
+        <img class="im2" src="https://www.w3schools.com/w3images/coffeehouse2.jpg" alt="">
+    </div>
+    <hr>
+    <h1 class="h5" id="Address" >Address</h1><br>
+    <iframe class="fm" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121792.9292243388!2d78.22691994335936!3d17.458324200000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93cfbbd436f1%3A0x60eaaedbe0727f34!2sMinerva%20Grand%20Kondapur!5e0!3m2!1sen!2sin!4v1697638347263!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <p class="p4"><b>Reserve a table,</b> ask for today's special or just send us a message:</p>
+    <form class="f1">
+        <fieldset>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="E-mail">
+            <input type="text" placeholder="How Many People">
+            <input type="datetime-local" name="datetime-local">
+            <input type="text" placeholder="Message\Special requirements">
+            <input type="button" value="Send Message">
+        </fieldset>
+    </form>
+    <div>
+        Powered by The Cafe <br>
+        G-mail: Cafe@gmail.com <br>
+        Contact: 9876543210 <br>
+    </div>
+</body>
+
+</html>
